@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8EFEE876-0065-4CA7-BE2A-E49F4C292DF1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Student</RootNamespace>
+    <AssemblyName>Student</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win64_x64\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win64_x64\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win64_x64\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win64_x64\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBA\clsCourse.cs" />
+    <Compile Include="DBA\clsMainDb.cs" />
+    <Compile Include="DBA\clsRegister.cs" />
+    <Compile Include="DBA\clsRoom.cs" />
+    <Compile Include="DBA\clsSchdule.cs" />
+    <Compile Include="DBA\clsSection.cs" />
+    <Compile Include="DBA\clsStudent.cs" />
+    <Compile Include="DBA\clsTime.cs" />
+    <Compile Include="DBA\clsUser.cs" />
+    <Compile Include="Log In\frm_addUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log In\frm_addUser.Designer.cs">
+      <DependentUpon>frm_addUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log In\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log In\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log In\User_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log In\User_form.Designer.cs">
+      <DependentUpon>User_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="plane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plane.Designer.cs">
+      <DependentUpon>plane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register\frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register\frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register\frmRegisterList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register\frmRegisterList.Designer.cs">
+      <DependentUpon>frmRegisterList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schdule\EditStartdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schdule\EditStartdate.Designer.cs">
+      <DependentUpon>EditStartdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schdule\frmSchdule_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schdule\frmSchdule_list.Designer.cs">
+      <DependentUpon>frmSchdule_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportData\frm_ReportData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportData\frm_ReportData.Designer.cs">
+      <DependentUpon>frm_ReportData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schdule\frmCourseData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schdule\frmCourseData.Designer.cs">
+      <DependentUpon>frmCourseData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schdule\frmCourse_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schdule\frmCourse_List.Designer.cs">
+      <DependentUpon>frmCourse_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schdule\frmSchdule_Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schdule\frmSchdule_Data.Designer.cs">
+      <DependentUpon>frmSchdule_Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schdule\frmTimeData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schdule\frmTimeData.Designer.cs">
+      <DependentUpon>frmTimeData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmmain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmain.Designer.cs">
+      <DependentUpon>frmmain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schdule\frmRoomData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schdule\frmRoomData.Designer.cs">
+      <DependentUpon>frmRoomData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schdule\frmRoomList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schdule\frmRoomList.Designer.cs">
+      <DependentUpon>frmRoomList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schdule\frmSectionData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schdule\frmSectionData.Designer.cs">
+      <DependentUpon>frmSectionData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schdule\frmSectionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schdule\frmSectionList.Designer.cs">
+      <DependentUpon>frmSectionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schdule\frmTimeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schdule\frmTimeList.Designer.cs">
+      <DependentUpon>frmTimeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Studentdata\frm_StudentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Studentdata\frm_StudentList.Designer.cs">
+      <DependentUpon>frm_StudentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Studentdata\AddStudentData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Studentdata\AddStudentData.Designer.cs">
+      <DependentUpon>AddStudentData.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Log In\frm_addUser.resx">
+      <DependentUpon>frm_addUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log In\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log In\User_form.resx">
+      <DependentUpon>User_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plane.resx">
+      <DependentUpon>plane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\frmRegisterList.resx">
+      <DependentUpon>frmRegisterList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schdule\EditStartdate.resx">
+      <DependentUpon>EditStartdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schdule\frmSchdule_list.resx">
+      <DependentUpon>frmSchdule_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportData\frm_ReportData.resx">
+      <DependentUpon>frm_ReportData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schdule\frmCourseData.resx">
+      <DependentUpon>frmCourseData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schdule\frmCourse_List.resx">
+      <DependentUpon>frmCourse_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schdule\frmSchdule_Data.resx">
+      <DependentUpon>frmSchdule_Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schdule\frmTimeData.resx">
+      <DependentUpon>frmTimeData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmain.resx">
+      <DependentUpon>frmmain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Schdule\frmRoomData.resx">
+      <DependentUpon>frmRoomData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schdule\frmRoomList.resx">
+      <DependentUpon>frmRoomList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schdule\frmSectionData.resx">
+      <DependentUpon>frmSectionData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schdule\frmSectionList.resx">
+      <DependentUpon>frmSectionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schdule\frmTimeList.resx">
+      <DependentUpon>frmTimeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Studentdata\frm_StudentList.resx">
+      <DependentUpon>frm_StudentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Studentdata\AddStudentData.resx">
+      <DependentUpon>AddStudentData.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
